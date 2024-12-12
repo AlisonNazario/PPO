@@ -1,0 +1,95 @@
+body {
+    background: url('../img/jo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #343a40;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco semi-transparente */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-weight: bold;
+    color: #131313;
+}
+
+.card-text {
+    font-size: 14px;
+}
+
+.btn {
+    border-radius: 5px;
+}
+
+h2 {
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.navbar {
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Navbar com fundo semi-transparente */
+}
+
+.navbar a {
+    color: #007bff;
+}
+
+.form-control {
+    border-radius: 5px;
+    border-color: #ced4da;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.btn-primary {
+    background-color: #d3641a;
+    border-color: #ec6f1c;
+}
+
+.btn-primary:hover {
+    background-color: #ec6f1c;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.delete-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: red;
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semi-transparente */
+    padding: 5px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.delete-icon:hover {
+    background-color: rgba(255, 0, 0, 0.8);
+    color: #fff;
+    transform: scale(1.1);
+}
