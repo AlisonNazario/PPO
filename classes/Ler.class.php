@@ -2,16 +2,16 @@
 include '../config/database.php';
 session_start();
 
-// Inicializa o carrinho como array associativo, se ainda não existir
+// Inicializa o Ler como array associativo, se ainda não existir
 if (!isset($_SESSION['cart']) || !is_array($_SESSION['cart'])) {
     $_SESSION['cart'] = [];
 }
 
-// Adiciona um livro ao carrinho
+// Adiciona um livro ao Ler
 if (isset($_GET['id'])) {
     $bookId = $_GET['id'];
 
-    // Verifica se o livro já está no carrinho
+    // Verifica se o livro já está no Ler
     if (isset($_SESSION['cart'][$bookId])) {
         $_SESSION['cart'][$bookId]['quantity'] += 1; // Incrementa a quantidade
     } else {
@@ -33,11 +33,11 @@ if (isset($_GET['id'])) {
         }
     }
 
-    header("Location: ../paginas/Carrinho.php");
+    header("Location: ../paginas/Ler.php");
     exit();
 }
 
-// Atualiza a quantidade de itens no carrinho
+// Atualiza a quantidade de itens no Ler
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_quantity'])) {
     $bookId = $_POST['book_id'];
     $newQuantity = $_POST['quantity'];
@@ -49,21 +49,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_quantity'])) {
             unset($_SESSION['cart'][$bookId]); // Remove o item se a quantidade for 0
         }
     }
-    header("Location: ../paginas/Carrinho.php");
+    header("Location: ../paginas/Ler.php");
     exit();
 }
 
-// Remove um item do carrinho
+// Remove um item do Ler
 if (isset($_GET['remove'])) {
     $bookId = $_GET['remove'];
     if (isset($_SESSION['cart'][$bookId])) {
         unset($_SESSION['cart'][$bookId]);
     }
-    header("Location: ../paginas/Carrinho.php");
+    header("Location: ../paginas/Ler.php");
     exit();
 }
 
-// Busca detalhes dos livros no carrinho
+// Busca detalhes dos livros no Ler
 $cartItems = [];
 if (!empty($_SESSION['cart'])) {
     foreach ($_SESSION['cart'] as $id => $details) {

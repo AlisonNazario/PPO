@@ -52,8 +52,8 @@ session_start();
                         </h5>
                         <p class="card-text"><strong>Autor:</strong> <?= $row['autor'] ?></p>
                         <?php if (isset($_SESSION['nivelPermissao'])): ?>
-                            <!-- Botão Adicionar ao Carrinho -->
-                            <a href="../classes/Carrinho.class.php?id=<?= $row['id'] ?>" class="btn btn-primary">Adicionar à Lista de Leitura</a>
+                            <!-- Botão Adicionar ao Ler -->
+                            <a href="../classes/Ler.class.php?id=<?= $row['id'] ?>" class="btn btn-primary">Adicionar à Lista de Leitura</a>
                         <?php else: ?>
                             <!-- Botão que abre o modal se não estiver logado -->
                             <button class="btn btn-primary" data-toggle="modal" data-target="#loginModal">Adicionar à Lista de Leitura</button>
@@ -76,7 +76,7 @@ session_start();
                 </button>
             </div>
             <div class="modal-body">
-                <p>Você precisa estar logado para adicionar livros ao carrinho.</p>
+                <p>Você precisa estar logado para adicionar livros ao Lista de leitura.</p>
                 <div class="d-flex justify-content-around">
                     <a href="../login/login.php" class="btn btn-primary">Fazer Login</a>
                     <a href="../login/register.php" class="btn btn-secondary">Criar Conta</a>

@@ -34,7 +34,7 @@ $stmt->execute();
 $result = $stmt->get_result();
 
 if ($result->num_rows === 0) {
-    header('Location: ler.php');
+    header('Location: Ler.php');
     exit();
 }
 
